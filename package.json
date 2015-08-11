@@ -1,0 +1,19 @@
+{
+  "name": "fireflux-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fireflux.js",
+  "scripts": {
+    "start": "budo app.js --live -- -t [ babelify --stage 0 ]"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "budo": "^4.1.0"
+  },
+  "dependencies": {
+    "firebase": "^2.2.9",
+    "react": "^0.13.3"
+  }
+}
