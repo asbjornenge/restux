@@ -1,5 +1,5 @@
 import React     from 'react'
-import { Query } from './restux'
+import { Query } from './lib/restux'
 
 @Query({ events : '/events' })
 export default class EventList extends React.Component {

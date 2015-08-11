@@ -1,11 +1,13 @@
-import React        from 'react'
-import { Endpoint } from './restux'
+import React          from 'react'
+import { Entrypoint } from './lib/restux'
+import Restux         from './restux'
+import EventList      from './EventList'
 
-@Endpoint('/api')
-class App extends React.Component {
+let restux = new Restux()
+
+@Entrypoint(restux)
+export default class App extends React.Component {
     render() {
-        return <div />
+        return <EventList />
     }
 }
-
-React.render(<App />, document.body)
