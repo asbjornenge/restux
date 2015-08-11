@@ -4,13 +4,16 @@
   "description": "",
   "main": "fireflux.js",
   "scripts": {
-    "start": "budo app.js --live -- -t [ babelify --stage 0 ]"
+    "start": "budo app.js --live -- -t [ babelify --stage 0 ]",
+    "test": "mocha --compilers js:babel/register -R nyan -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^5.8.21",
     "babelify": "^6.1.3",
-    "budo": "^4.1.0"
+    "budo": "^4.1.0",
+    "testdom": "^1.1.0"
   },
   "dependencies": {
     "firebase": "^2.2.9",

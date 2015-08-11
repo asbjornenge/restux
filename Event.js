@@ -1,8 +1,8 @@
-import React             from 'react'
-import { FireComponent } from './fireflux'
+import React     from 'react'
+import { Query } from './restux'
 
-@FireComponent({ events : '/events', config : '/config' })
-export default class Component extends React.Component {
+@Query({ events : '/events' })
+export default class EventList extends React.Component {
     render() {
         return (
             <div>
