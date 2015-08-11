@@ -1,15 +1,24 @@
 import React     from 'react'
-import { Query } from './restux'
+import { Endpoint } from './restux'
 
-@Query({ events : '/events' })
-export default class EventList extends React.Component {
+@Endpoint
+export default class Event extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Oh, it burns!</h1>
-                <div>{this.state && JSON.stringify(this.state.config)}</div>
-                <div>{this.state && JSON.stringify(this.state.events)}</div>
-            </div>
+            <div>{this.props.event.id}</div>
         )
+    }
+    onSave() {
+        this.restux.xhr('/events/'+this.props.event.id)
+            .method('PUT')
+            .data({ name : 'yolo' })
+            .call((res) => {
+                let events = this.restux.state.events
+                    .map((e) => {
+                        if (e.id == this.props.event.id) return res.body
+                        return e
+                    })
+                this.restux.setState({ events : events })
+            })
     }
 }
