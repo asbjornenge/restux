@@ -6,7 +6,7 @@ The Restux instance acts both as stores and actions.
 Experimental... I'm not too sure about the whole thing.
 
 ```js
-import { Restux, Endpoint } from 'restux'
+import { Restux, Entrypoint, Endpoint } from 'restux'
 
 class MyRestux extends Restux {
     constructor() {
