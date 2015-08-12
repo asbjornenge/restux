@@ -3,9 +3,7 @@ import { Restux as _Restux } from './lib/restux'
 export default class Restux extends _Restux {
     constructor() {
         super()
-        // initial state
-        this.state.events = []
-        // do bootstrap
+        // do bootstrap and eventually setState ->
         this.setState({ events : [{ id : 1, name : 'meh' }] })
     } 
     addEvent(newEvent) {

@@ -1,7 +1,7 @@
-import React     from 'react'
-import { Endpoint } from './restux'
+import React        from 'react'
+import { Endpoint } from './lib/restux'
 
-@Endpoint
+@Endpoint // <- simply injects the restux
 export default class Event extends React.Component {
     render() {
         return (
