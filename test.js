@@ -19,8 +19,7 @@ it('restux is passed via context', () => {
     assert(eventList.restux != undefined)
 })
 
-it('@Query registers components in restux', () => {
+it('@Endpoint registers components in restux', () => {
     let eventList = ReactTestUtils.findRenderedComponentWithType(tree, EventList)
     assert(eventList.restux.components.indexOf(eventList) >= 0)
-    assert(eventList.query != undefined)
 })
